@@ -6,13 +6,13 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/17 11:59:10 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/24 17:26:07 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/24 17:30:58 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	int		i;
 	int		len;

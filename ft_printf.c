@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 17:42:10 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/24 17:26:15 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/24 18:01:50 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,12 +95,12 @@ char		*convert(unsigned int num, int base)
     char		*ptr;
 	int			len;
 
-	*representation = "0123456789ABCDEF";
+	representation = "0123456789ABCDEF";
 	len = ft_nbrlen(num, base);
-    if(!(ptr = (char)malloc(len + 1)))
+    if(!(ptr = (char*)malloc(len + 1)))
 		return (NULL);
 	ptr[len+1]= '\0';
-    while(num != 0);
+    while (num != 0)
     { 
         *--ptr = representation[num%base]; 
         num /= base; 
@@ -144,10 +144,10 @@ int         flag_parser(const char *save, int i, t_flag *flags, va_list args)
 		if (save[i] == '-')
 			*flags = flag_minus(*flags);
 		if (save[i] == '*')
-			*flags = flag_width_star(args, *flags);
+			*flags = flag_width_star(save[i], *flags);
 		if (ft_isdigit(save[i]))
-			*flags = flag_width(save[i], *flags);
-		if (if_format(save[i]))
+			*flags = flag_width(args, *flags);
+		if (is_format(save[i]))
 		{
 			flags->format = save[i];
 			break ;
