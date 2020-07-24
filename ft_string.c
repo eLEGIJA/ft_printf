@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 16:41:18 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/24 17:13:47 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/24 17:23:47 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ static int		is_flag_dot(char *str, t_flag flags)
 	char_count = 0;
 	if (flags.dot >= 0)
 	{
-		char_count += ft_treat_width(flags.dot, ft_strlen(str), 0);
-		char_count += ft_putstrprec(str, flags.dot);
+		char_count += ft_width(flags.dot, ft_strlen(str), 0);
+		char_count += strprecision(str, flags.dot);
 	}
 	else
 	{
-		char_count += ft_putstrprec(str, ft_strlen(str));
+		char_count += strprecision(str, ft_strlen(str));
 	}
 	return (char_count);
 }

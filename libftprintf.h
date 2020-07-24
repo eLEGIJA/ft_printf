@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/17 12:01:02 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/24 17:14:29 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/24 17:23:54 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ int			ft_nbrlen(int nbr, int base);
 int			ft_isdigit(int c);
 int			is_int(int i, t_flag flags);
 int				is_string(char *str, t_flag flags);
+int         saver(const char *save, va_list args);
 
 #endif
