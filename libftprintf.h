@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/17 12:01:02 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/24 18:33:36 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/24 18:50:08 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef	struct		s_flag
 	int				star;
 }	                t_flag;
 
+int		ft_width(int width, int minus, int has_zero);
 int			ft_putchar(int c);
 char		*ft_strdup(const char *src);
 int			ft_printf(const char *input, ...);

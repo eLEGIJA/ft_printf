@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 17:42:10 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/24 18:43:33 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/24 18:47:32 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,18 +74,18 @@ int			format_len(int c, t_flag flags, va_list args)
 		char_count = is_char(va_arg(args, int), flags);
 	else if (c == 's')
 		char_count = is_string(va_arg(args, char *), flags);
-	//else if (c == 'p')
-		//char_count = is_pointer(va_arg(args, unsigned long long), flags);
+	else if (c == 'p')
+		char_count = is_pointer(va_arg(args, unsigned long long), flags);
 	else if (c == 'd' || c == 'i')
 		char_count = is_int(va_arg(args, int), flags);
-	//else if (c == 'u')
-		//char_count += is_uint((unsigned int)va_arg(args, unsigned int),flags);
-	//else if (c == 'x')
-		//char_count += is_hexa(va_arg(args, unsigned int), 1, flags);
-	//else if (c == 'X')
-		//char_count += is_hexa(va_arg(args, unsigned int), 0, flags);
-	//else if (c == '%')
-		//char_count += is_percent(flags);
+	else if (c == 'u')
+		char_count += is_uint((unsigned int)va_arg(args, unsigned int),flags);
+	else if (c == 'x')
+		char_count += is_hexa(va_arg(args, unsigned int), 1, flags);
+	else if (c == 'X')
+		char_count += is_hexa(va_arg(args, unsigned int), 0, flags);
+	else if (c == '%')
+		char_count += is_percent(flags);
 	return (char_count);
 }
 
@@ -134,8 +134,7 @@ int         flag_parser(const char *save, int i, t_flag *flags, va_list args)
 {
     while (save[i])
 	{
-		if (!ft_isdigit(save[i]) && !is_flag(save[i])
-		&& !is_format(save[i]))
+		if (!ft_isdigit(save[i]) && !is_flag(save[i]) && !is_format(save[i]))
 			break ;
 		if (save[i] == '0' && flags->width == 0 && flags->minus == 0)
 			flags->zero = 1;
