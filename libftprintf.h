@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/17 12:01:02 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/24 18:50:08 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/24 19:03:20 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,8 @@ int			ft_isdigit(int c);
 int			is_int(int i, t_flag flags);
 int			is_string(char *str, t_flag flags);
 int         saver(const char *save, va_list args);
+int		ft_strlen(char *str);
+int		strprecision(char *str, int precision);
+char		*convert(unsigned int num, int base);
 
 #endif

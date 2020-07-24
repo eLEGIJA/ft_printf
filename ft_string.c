@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 16:41:18 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/24 18:50:04 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/24 19:00:05 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int				is_string(char *str, t_flag flags)
 	char_count = 0;
 	if (!str)
 		str = "(null)";
-	if (flags.dot >= 0 && (size_t)flags.dot > ft_strlen(str))
+	if (flags.dot >= 0 && (int)flags.dot > ft_strlen(str))
 		flags.dot = ft_strlen(str);
 	if (flags.minus == 1)
 		char_count += is_flag_dot(str, flags);

@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 16:40:29 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/24 18:49:57 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/24 19:03:30 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	int_counter(char *d_i, int save_i, t_flag flags)
 	char_count = 0;
 	if (flags.minus == 1)
 		char_count += int_minus(d_i, save_i, flags);
-	if (flags.dot >= 0 && (size_t)flags.dot < ft_strlen(d_i))
+	if (flags.dot >= 0 && (int)flags.dot < ft_strlen(d_i))
 		flags.dot = ft_strlen(d_i);
 	if (flags.dot >= 0)
 	{
@@ -68,7 +68,7 @@ int			is_int(int i, t_flag flags)
 		flags.width--;
 		char_count++;
 	}
-	str = ft_convert(i, 10);
+	str = convert((unsigned int)i, 10);
 	char_count += int_counter(str, save_i, flags);
 	free(str);
 	return (char_count);
