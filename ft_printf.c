@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 17:42:10 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/24 19:00:07 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/24 19:24:25 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ int			format_len(int c, t_flag flags, va_list args)
 	return (char_count);
 }
 
-char		*convert(unsigned int num, int base) 
+char		*convert(unsigned int num, int base)
 { 
     static char	*representation;
     char		*ptr;
