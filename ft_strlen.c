@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/17 15:30:14 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/24 18:33:39 by msafflow         ###   ########.fr       */
+/*   Created: 2020/07/24 18:40:29 by msafflow          #+#    #+#             */
+/*   Updated: 2020/07/24 18:41:17 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-char	*ft_strchr(const char *s, int c)
+int		ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			return ((char *)s + i);
+	while (str[i] != '\0')
 		i++;
-	}
-	if (s[i] == c)
-		return ((char *)s + i);
-	return (0);
+	return (i);
 }
