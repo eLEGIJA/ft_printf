@@ -1,7 +1,8 @@
 NAME = libftprintf.a
 
 SRCS =	ft_printf.c ft_flags.c ft_isdigit.c ft_nbrlen.c ft_putchar.c \
-		ft_strchr.c ft_strdup.c ft_tolower.c
+		ft_strchr.c ft_strdup.c ft_tolower.c ft_hex.c ft_int.c\
+		ft_percent.c ft_string.c ft_strlen.c
 
 SRC_OBJECTS = $(SRCS:.c=.o)
 
@@ -23,7 +24,7 @@ $(NAME): $(SRC_OBJECTS)
 	@echo "$< compiled"
 
 clean:
-	@/bin/rm -f $(OBJECTS)
+	@/bin/rm -f $(SRC_OBJECTS)
 	@echo "All objects removed"
 
 fclean: clean
