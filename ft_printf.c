@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 17:42:10 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/25 15:32:30 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/25 16:19:30 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int			format_len(int c, t_flag flags, va_list args)
 	else if (c == 'd' || c == 'i')
 		char_count = is_int(va_arg(args, int), flags);
 	else if (c == 'u')
-		char_count += is_uint((unsigned int)va_arg(args, unsigned int),flags);
+		char_count += is_uint(va_arg(args, unsigned int), flags);
 	else if (c == 'x')
 		char_count += is_hex(va_arg(args, unsigned int), 1, flags);
 	else if (c == 'X')
@@ -89,7 +89,7 @@ int			format_len(int c, t_flag flags, va_list args)
 	return (char_count);
 }
 
-char		*convert(unsigned int num, int base)
+char		*convert(int num, int base)
 { 
     static char	*representation;
     char		*ptr;
@@ -97,8 +97,13 @@ char		*convert(unsigned int num, int base)
 
 	representation = "0123456789ABCDEF";
 	len = ft_nbrlen(num, base);
-    if(!(ptr = (char*)malloc(len + 1)))
+    if (!(ptr = (char*)malloc(len + 1)))
 		return (NULL);
+	if (num < 0)
+	{
+		ptr[0] = '-';
+		num = -num;
+	}
 	ptr[len+1]= '\0';
     while (num != 0)
     { 

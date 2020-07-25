@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/25 15:10:46 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/25 15:32:52 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/25 16:19:20 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,7 @@ static int	ft_width_uint(char *u_int, t_flag flags)
 		char_count += ft_width(flags.width, 0, 0);
 	}
 	else
-		char_count += ft_width(flags.width,
-		ft_strlen(u_int), flags.zero);
+		char_count += ft_width(flags.width, ft_strlen(u_int), flags.zero);
 	if (flags.minus == 0)
 		char_count += ft_dot_uint(u_int, flags);
 	return (char_count);

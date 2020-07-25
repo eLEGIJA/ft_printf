@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/17 12:01:02 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/25 15:33:06 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/25 16:19:18 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int			is_string(char *str, t_flag flags);
 int         saver(const char *save, va_list args);
 int			ft_strlen(char *str);
 int			strprecision(char *str, int precision);
-char		*convert(unsigned int num, int base);
+char		*convert(int num, int base);
 int			is_hex(unsigned int ui, int lower, t_flag flags);
 int			is_percent(t_flag flags);
 int			is_uint(unsigned int ui, t_flag flags);
