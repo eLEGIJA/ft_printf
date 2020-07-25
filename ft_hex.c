@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/25 15:03:31 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/25 16:19:36 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/25 16:44:17 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int				is_hex(unsigned int ui, int lower, t_flag flags)
 		char_count += ft_width(flags.width, 0, 0);
 		return (char_count);
 	}
-	hex = convert(ui, 16);
+	hex = uconvert(ui, 16);
 	if (lower == 1)
 		hex = ft_strtolower(hex);
 	char_count += ft_width_hex(hex, flags);

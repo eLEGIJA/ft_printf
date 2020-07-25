@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 17:42:10 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/25 16:24:43 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/25 16:44:13 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,26 @@ int			format_len(int c, t_flag flags, va_list args)
 	return (char_count);
 }
 
+char		*ullconvert(unsigned long long num, int base)
+{
+	static char	*representation;
+    char		*ptr;
+	int			len;
+
+	representation = "0123456789ABCDEF";
+	len = ft_nbrlen(num, base);
+    if (!(ptr = (char*)malloc(len + 1)))
+		return (NULL);
+	ptr[len+1]= '\0';
+    while (num != 0)
+    { 
+		len--;
+        ptr[len] = representation[num%base]; 
+        num /= base;
+    } 
+    return(ptr); 
+}
+
 char		*convert(int num, int base)
 { 
     static char	*representation;
@@ -111,6 +131,26 @@ char		*convert(int num, int base)
         ptr[len] = representation[num%base]; 
         num /= base;
     } 
+    return(ptr);
+}
+
+char		*uconvert(unsigned int num, int base)
+{ 
+    static char	*representation;
+    char		*ptr;
+	int			len;
+
+	representation = "0123456789ABCDEF";
+	len = ft_nbrlen(num, base);
+    if (!(ptr = (char*)malloc(len + 1)))
+		return (NULL);
+	ptr[len+1]= '\0';
+    while (num != 0)
+    { 
+		len--;
+        ptr[len] = representation[num%base]; 
+        num /= base;
+    } 
     return(ptr); 
 }
 
@@ -118,7 +158,7 @@ int         is_format(char c)
 {
     const char  *formats;
 
-    formats = "cspdiux";
+    formats = "cspdiuxX";
     if (ft_strchr(formats, c))
         return (1);
     else

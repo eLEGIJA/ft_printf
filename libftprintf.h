@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/17 12:01:02 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/25 16:19:18 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/25 16:44:08 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,7 @@ int			is_percent(t_flag flags);
 int			is_uint(unsigned int ui, t_flag flags);
 int			is_pointer(unsigned long long ullong, t_flag flags);
 char		*ft_strtolower(char *str);
+char		*uconvert(unsigned int num, int base);
+char		*ullconvert(unsigned long long num, int base);
+
 #endif

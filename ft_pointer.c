@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/25 15:17:36 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/25 16:19:31 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/25 16:44:13 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int			is_pointer(unsigned long long ullong, t_flag flags)
 		char_count += strprecision("0x", 2);
 		return (char_count += ft_width(flags.width, 0, 1));
 	}
-	pointer = convert(ullong, 16);
+	pointer = ullconvert(ullong, 16);
 	pointer = ft_strtolower(pointer);
 	if ((int)flags.dot < ft_strlen(pointer))
 		flags.dot = ft_strlen(pointer);
