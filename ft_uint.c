@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/25 15:10:46 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/25 15:22:53 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/25 15:32:52 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static int	ft_width_uint(char *u_int, t_flag flags)
 	return (char_count);
 }
 
-int			ft_treat_uint(unsigned int ui, t_flag flags)
+int			is_uint(unsigned int ui, t_flag flags)
 {
 	char	*u_int;
 	int		char_count;
