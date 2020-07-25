@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 17:42:10 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/25 16:19:30 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/25 16:24:43 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,8 +107,9 @@ char		*convert(int num, int base)
 	ptr[len+1]= '\0';
     while (num != 0)
     { 
-        *--ptr = representation[num%base]; 
-        num /= base; 
+		len--;
+        ptr[len] = representation[num%base]; 
+        num /= base;
     } 
     return(ptr); 
 }
