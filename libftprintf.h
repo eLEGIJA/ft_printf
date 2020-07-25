@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/17 12:01:02 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/24 19:24:21 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/25 15:25:23 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef	struct		s_flag
 	int				star;
 }	                t_flag;
 
-int		ft_width(int width, int minus, int has_zero);
+int			ft_width(int width, int minus, int has_zero);
 int			ft_putchar(int c);
 char		*ft_strdup(const char *src);
 int			ft_printf(const char *input, ...);
@@ -45,8 +45,12 @@ int			ft_isdigit(int c);
 int			is_int(int i, t_flag flags);
 int			is_string(char *str, t_flag flags);
 int         saver(const char *save, va_list args);
-int		ft_strlen(char *str);
-int		strprecision(char *str, int precision);
+int			ft_strlen(char *str);
+int			strprecision(char *str, int precision);
 char		*convert(unsigned int num, int base);
-
+int			is_hex(unsigned int ui, int lower, t_flag flags);
+int			is_percent(t_flag flags);
+int			ft_treat_uint(unsigned int ui, t_flag flags);
+int			is_pointer(unsigned long long ullong, t_flag flags);
+char		*ft_strtolower(char *str);
 #endif

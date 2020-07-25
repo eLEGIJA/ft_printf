@@ -6,7 +6,7 @@
 /*   By: msafflow <elegija4mlg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 12:31:45 by msafflow          #+#    #+#             */
-/*   Updated: 2020/07/24 19:24:21 by msafflow         ###   ########.fr       */
+/*   Updated: 2020/07/25 15:24:56 by msafflow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,14 @@ int ft_tolower(int c)
 		return (c + 32);
 	else
 		return (c);
+}
+
+char	*ft_strtolower(char *str)
+{
+	int i;
+
+	i = -1;
+	while (str[++i])
+		str[i] = ft_tolower(str[i]);
+	return (str);
 }
