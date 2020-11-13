@@ -37,6 +37,7 @@ $(NAME).a: $(LIBFT)/$(LIBFT).a $(SRC_OBJECTS)
 %.o: %.c $(HEADERS)
 	@gcc $(FLAGS) -c $< -o $@
 	@echo "$@ added"
+	
 clean:
 	@/bin/rm -rf $(SRC_OBJECTS)
 	@make -C $(LIBFT) clean
